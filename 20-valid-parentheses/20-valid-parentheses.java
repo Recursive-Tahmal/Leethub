@@ -1,5 +1,7 @@
+import java.util.Stack;
+
 class Solution {
-  public boolean isValid(String s) {
+    public boolean isValid(String s) {
         Stack<Character> st = new Stack<>();
         for(int i = 0 ; i < s.length() ; i++) {
             char ch = s.charAt(i);
@@ -13,8 +15,8 @@ class Solution {
                 } else st.pop();
             }
         }
-            return (st.empty() == true);
-        
+        return (st.empty());
+
     }
 
     public static boolean matching(char a , char b){
