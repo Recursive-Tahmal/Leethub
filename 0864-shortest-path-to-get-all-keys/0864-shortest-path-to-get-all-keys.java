@@ -71,7 +71,7 @@ class Solution {
             }
             distance++; // next distance
         }
-        for(int i = 0; i<1000; ++i);
+        for(int i = 0; i<1000; ++i); // for some reason it makes leetcode run faster
         return -1; // we could not find desired state allkeys, so return -1
     }
 }
