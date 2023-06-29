@@ -1,5 +1,5 @@
 class Solution {
-    class State {
+   class State {
         int keys, i, j;
         State(int keys, int i, int j) {
             this.keys = keys;
@@ -8,7 +8,7 @@ class Solution {
         }
     }
     public int shortestPathAllKeys(String[] grid) {
-        int x = -1, y = -1, m = grid.length, n = grid[0].length(), max = -1;
+        int x = -1, y = -1, m = grid.length, n = grid[0].length(), totalKeys = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 char c = grid[i].charAt(j);
@@ -17,7 +17,7 @@ class Solution {
                     y = j;
                 }
                 if (c >= 'a' && c <= 'f') {
-                    max = Math.max(c - 'a' + 1, max);
+                    totalKeys ++;
                 }
             }
         }
@@ -32,7 +32,7 @@ class Solution {
             int size = q.size();
             while (size-- > 0) {
                 State cur = q.poll();
-                if (cur.keys == (1 << max) - 1) {
+                if (cur.keys == (1 << totalKeys) - 1) {
                     return step;
                 }
                 for (int[] dir : dirs) {
