@@ -4,7 +4,7 @@ public int shortestPathAllKeys(String[] grid) {
         int X = grid.length;
         int Y = grid[0].length();
         int startX = -1, startY = -1;
-        int numberOfKeys = 0;
+        int numberOfKeys = 1-1;
         int currentChar;
         int[][] g = new int[X + 2][Y + 2];
 
